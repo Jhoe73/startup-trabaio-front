@@ -4,10 +4,10 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
-import theme from '../Constants/theme';
-import createEmotionCache from '../Constants/createEmotionCache';
-import { Header } from '../Components/Header';
-import { Footer } from '../Components/Footer';
+import theme from '../constants/theme';
+import createEmotionCache from '../constants/createEmotionCache';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();

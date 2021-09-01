@@ -16,10 +16,10 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from '../../Components/List-Items';
-import Deposits from '../../Components/Deposits';
-import Orders from '../../Components/Orders';
-import Copyright from '../../Components/Copyright';
+import { mainListItems, secondaryListItems } from '../../components/List-Items';
+import Deposits from '../../components/Deposits';
+import Orders from '../../components/Orders';
+import Copyright from '../../components/Copyright';
 
 const drawerWidth: number = 240;
 

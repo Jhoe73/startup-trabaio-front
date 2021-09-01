@@ -8,16 +8,18 @@ export function Header(){
     <React.Fragment>
       <header className={styles.navbar}>
         <nav>
-          <img src="./logo-white.png" alt="Trabaio" />
+          <Link href="/">
+            <img src="/logos/logo-white.png" alt="Trabaio" />
+          </Link>
           <div className={styles.options}>
             <Link href="/Site/places" passHref>
-              <span>Buscar Espaços</span>
+              <div><span>Buscar Espaços</span></div>
             </Link>
             <Link href="#" passHref>
-              <span>Quero Participar</span>
+              <div><span>Quero Participar</span></div>
             </Link>
             <Link href="/Site/pricing" passHref>
-              <span>Planos</span>
+              <div><span>Planos</span></div>
             </Link>
           </div>
           <Link href="/Site/signIn" passHref>

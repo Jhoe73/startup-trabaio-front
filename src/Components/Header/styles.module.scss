@@ -10,7 +10,6 @@
   top: 0;
   z-index: 1;
 
-  
   nav {
     width: 100%;
     max-width: 1200px;
@@ -18,9 +17,6 @@
     align-items: center;
     justify-content: space-between;
 
-    img{
-      height: 170px;
-    }
   }
 
   .login {
@@ -51,13 +47,21 @@
 }
 
 .options{
-  display: flex; 
-  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
   width: 50%;
 
-  span{
-    color: #F7F8FA;
-    font: 500 1rem Roboto, sans-serif;
-    cursor: pointer;
+  div{
+    float: left;
+    width: 33.3%;
+    box-sizing: border-box;
+
+    span{
+      color: #F7F8FA;
+      font: 500 1rem Roboto, sans-serif;
+      cursor: pointer;
+    }
   }
 }
