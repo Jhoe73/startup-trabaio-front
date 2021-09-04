@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -48,17 +49,21 @@ export const mainListItems = (
 export const secondaryListItems = (
   <div>
     <ListSubheader inset>Relatórios</ListSubheader>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Reservas" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Meus Planos" />
-    </ListItem>
+    <Link href='/Dashbord/Book'>
+      <ListItem button>
+        <ListItemIcon>
+          <AssignmentIcon />
+        </ListItemIcon>
+        <ListItemText primary="Reservas" />
+      </ListItem>
+    </Link>
+    <Link href='/Dashbord/Plans'>
+      <ListItem button>
+        <ListItemIcon>
+          <AssignmentIcon />
+        </ListItemIcon>
+        <ListItemText primary="Meus Planos" />
+      </ListItem>
+    </Link>
   </div>
 );

@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "Common/*": ["components/common/*"],
+      "Site-components/*": ["components/Site/*"],
+      "Dash-components/*": ["components/Dashboard/*"],
+      "Components/*": ["components/*"],
+      "@Book": ["pages/Dashboard/book"]
+    },
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
@@ -32,9 +40,4 @@
     "**/*.ts",
     "**/*.tsx"
   ],
-  "baseUrl": ".",
-  "paths": {
-    "~/*": ["./*"],
-    "@/components/*": ["components/*"]
-  }
 }

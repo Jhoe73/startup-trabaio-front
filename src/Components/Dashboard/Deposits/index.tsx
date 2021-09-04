@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
-import Title from '../Title';
+import Title from 'Common/Title';
 import styles from './styles.module.scss';
 
 function preventDefault(event: React.MouseEvent) {

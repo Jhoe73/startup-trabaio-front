@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from 'next/head'
-import { Banner } from '../components/Banner';
-import { Container } from '../components/Container';
+import { Banner } from 'Site-components/Banner';
+import { Container } from 'Common/Container';
 import styles from '../styles/pages/index.module.scss';
 
-export default function index() {
+export default function Index() {
   return (
     <React.Fragment>
       <Head>
