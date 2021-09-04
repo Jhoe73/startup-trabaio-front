@@ -1,15 +1,6 @@
 import * as React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
-import Toolbar from '@material-ui/core/Toolbar';
-import Paper from '@material-ui/core/Paper';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import {CssBaseline, Typography, AppBar, Box, Container, Toolbar, Paper, Button} from '@material-ui/core';
+import {Stepper, Step, StepLabel} from '@material-ui/core';
 import AddressForm from 'Common/Checkout/PaymentForm';
 import PaymentForm from 'Common/Checkout/AddressForm';
 import Review from 'Common/Checkout/Review';

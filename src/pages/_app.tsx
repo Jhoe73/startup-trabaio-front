@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Head from 'next/head';
 import type { ReactElement, ReactNode } from 'react'
+import Head from 'next/head';
 import { AppProps } from 'next/app';
 import type { NextPage } from 'next'
 import { ThemeProvider } from '@material-ui/core/styles';

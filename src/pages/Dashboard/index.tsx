@@ -1,10 +1,6 @@
 import * as React from 'react';
 import { ReactElement } from 'react';
-import Box from '@material-ui/core/Box';
-import Toolbar from '@material-ui/core/Toolbar';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+import {Container, Grid, Paper} from '@material-ui/core';
 import Deposits from "Dash-components/Deposits";
 import Orders from 'Dash-components/Orders';
 import Copyright from 'Common/Copyright';
@@ -12,19 +8,7 @@ import DashLayout from 'Components/Layout/dash';
 
 export default function DashboardContent() {
   return (
-      <Box
-        component="main"
-        sx={{
-          backgroundColor: (theme) =>
-            theme.palette.mode === 'light'
-              ? theme.palette.grey[100]
-              : theme.palette.grey[900],
-          flexGrow: 1,
-          height: '100vh',
-          overflow: 'auto',
-        }}
-      >
-        <Toolbar />
+      <React.Fragment> 
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
           <Grid container spacing={3}>
             {/* Chart */}
@@ -61,7 +45,7 @@ export default function DashboardContent() {
           </Grid>
           <Copyright sx={{ pt: 4 }} />
         </Container>
-      </Box>
+      </React.Fragment> 
   );
 }
 
