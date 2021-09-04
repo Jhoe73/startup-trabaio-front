@@ -1,9 +1,11 @@
 import * as React from 'react';
+import { ReactElement } from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Link from 'Common/Link';
+import DashLayout from 'Components/Layout/dash';
 
 export default function Places() {
   return (
@@ -21,4 +23,10 @@ export default function Places() {
       </Box>
     </Container>
   );
+}
+
+Places.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <DashLayout>{page}</DashLayout>
+  )
 }
