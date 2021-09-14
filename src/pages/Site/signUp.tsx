@@ -1,8 +1,12 @@
 import * as React from 'react';
-import {CssBaseline, Typography, Grid, Box, Container, Button} from '@material-ui/core';
-import {TextField, FormControlLabel, Checkbox, Link, } from '@material-ui/core';
-import Avatar from '@material-ui/core/Avatar';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import TextField from '@material-ui/core/TextField';
+import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 
 export default function SignUp() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -20,17 +24,14 @@ export default function SignUp() {
       <CssBaseline />
       <Box
         sx={{
-          marginTop: 8,
+          marginTop: 10,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-          <LockOutlinedIcon />
-        </Avatar>
         <Typography component="h1" variant="h5">
-          Sign up
+          Área de Cadastro
         </Typography>
         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
           <Grid container spacing={2}>
@@ -41,7 +42,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
+                label="Nome"
                 autoFocus
               />
             </Grid>
@@ -50,46 +51,161 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="lastName"
-                label="Last Name"
+                label="Sobrenome"
                 name="lastName"
                 autoComplete="lname"
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Email"
                 name="email"
                 autoComplete="email"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
+                id="cpf"
+                label="CPF"
+                name="cpf"
+                autoComplete="cpf"
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                required
+                fullWidth
+                id="gender"
+                label="Gênero"
+                name="gender"
+                autoComplete="gender"
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                required
+                fullWidth
+                id="phone"
+                label="Telefone"
+                name="phone"
+                autoComplete="phone"
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                required
+                fullWidth
+                id="dateBirth"
+                label="Data de Nascimento"
+                name="dateBirth"
+                autoComplete="dateBirth"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
+                id="cep"
+                label="CEP"
+                name="cep"
+                autoComplete="cep"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
+                id="estado"
+                label="Estado"
+                name="estado"
+                autoComplete="estado"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
+                id="city"
+                label="Cidade"
+                name="city"
+                autoComplete="city"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
+                id="district"
+                label="Bairro"
+                name="district"
+                autoComplete="district"
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
                 required
                 fullWidth
+                id="street"
+                label="Rua"
+                name="street"
+                autoComplete="street"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
+                id="number"
+                label="Número"
+                name="number"
+                autoComplete="number"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
+                id="complement"
+                label="Complemento"
+                name="complement"
+                autoComplete="complement"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
                 name="password"
-                label="Password"
+                label="Senha"
                 type="password"
                 id="password"
                 autoComplete="new-password"
               />
             </Grid>
-            <Grid item xs={12}>
-              <FormControlLabel
-                control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
+                name="passwordAgain"
+                label="Repetir Senha"
+                type="passwordAgain"
+                id="passwordAgain"
+                autoComplete="new-passwordAgain"
               />
             </Grid>
           </Grid>
           <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
-            Sign Up
+            Cadastre-se
           </Button>
-          <Grid container justifyContent="flex-end">
+          <Grid container justifyContent="center">
             <Grid item>
-              <Link href="/site/signIn" variant="body2">
-                Already have an account? Sign in
+              <Link href="/Site/signIn" variant="body2" style={{ textDecoration: 'none' }}>
+                Já tenho uma conta
               </Link>
             </Grid>
           </Grid>
