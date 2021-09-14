@@ -3,24 +3,26 @@ import Link from 'next/link'
 import { Button } from '@material-ui/core';
 import styles from './styles.module.scss';
 
-export function Header(){
+export default function Header(){
   return(
     <React.Fragment>
       <header className={styles.navbar}>
         <nav>
-          <img src="./logo-white.png" alt="Trabaio" />
+          <Link href="/">
+            <img src="/logos/logo-white.png" alt="Trabaio" />
+          </Link>
           <div className={styles.options}>
-            <Link href="/Site/places" passHref>
-              <span>Buscar Espaços</span>
+            <Link href="/site/places" passHref>
+              <div><span>Buscar Espaços</span></div>
             </Link>
             <Link href="#" passHref>
-              <span>Quero Participar</span>
+              <div><span>Quero Participar</span></div>
             </Link>
-            <Link href="/Site/pricing" passHref>
-              <span>Planos</span>
+            <Link href="/site/pricing" passHref>
+              <div><span>Planos</span></div>
             </Link>
           </div>
-          <Link href="/Site/signIn" passHref>
+          <Link href="/site/signIn" passHref>
             <Button variant="contained" color="primary" className={styles.login} >Login</Button>
           </Link>
           </nav>

@@ -1,9 +1,6 @@
 import * as React from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import Link from '../../Components/Link';
+import {Container, Typography, Box, Button} from '@material-ui/core';
+import Link from 'Common/Link';
 
 export default function About() {
   return (
