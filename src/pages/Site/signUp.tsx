@@ -1,14 +1,25 @@
 import * as React from 'react';
-import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import { Box, Button, FormControl, InputLabel, Typography } from '@material-ui/core';
+import Select, { SelectChangeEvent } from '@material-ui/core/Select';
+
+function fontMedium(text) {
+  return (
+    <Box fontWeight='fontWeightMedium' display='inline'>{text}</Box>
+  )
+}
 
 export default function SignUp() {
+  const [age, setAge] = React.useState('');
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setAge(event.target.value);
+  };
+  
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -20,7 +31,7 @@ export default function SignUp() {
   };
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="xl">
       <CssBaseline />
       <Box
         sx={{
@@ -28,13 +39,16 @@ export default function SignUp() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          paddingBottom: 25,
+          paddingLeft: 30,
+          paddingRight: 30
         }}
       >
-        <Typography component="h1" variant="h5">
-          Área de Cadastro
+        <Typography component="h1" variant="h5" p={2}>
+          Faça seu {fontMedium('Cadastro')} e aproveite o melhor de nossos {fontMedium('Coworkings')} 
         </Typography>
-        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-          <Grid container spacing={2}>
+        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 2 }} >
+          <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
               <TextField
                 autoComplete="fname"
@@ -117,24 +131,48 @@ export default function SignUp() {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <TextField
-                required
-                fullWidth
-                id="estado"
-                label="Estado"
-                name="estado"
-                autoComplete="estado"
-              />
+              <FormControl variant="outlined" sx={{width: "100%"}}>
+                <InputLabel htmlFor="outlined-Estado-native-simple">Estado</InputLabel>
+                <Select
+                  required
+                  
+                  native
+                  value={age}
+                  onChange={handleChange}
+                  label="Estado"
+                  inputProps={{
+                    name: 'Estado',
+                    id: 'outlined-Estado-native-simple',
+                  }}
+                >
+                  <option aria-label="None" value="" />
+                  <option value={10}>Ten</option>
+                  <option value={20}>Twenty</option>
+                  <option value={30}>Thirty</option>
+                </Select>
+              </FormControl>
+
             </Grid>
             <Grid item xs={12} sm={6}>
-              <TextField
-                required
-                fullWidth
-                id="city"
-                label="Cidade"
-                name="city"
-                autoComplete="city"
-              />
+              <FormControl variant="outlined" sx={{width: "100%"}}>
+                <InputLabel htmlFor="outlined-Estado-native-simple">Cidade</InputLabel>
+                <Select
+                  required
+                  native
+                  value={age}
+                  onChange={handleChange}
+                  label="cidade"
+                  inputProps={{
+                    name: 'cidade',
+                    id: 'outlined-city-native-simple',
+                  }}>
+
+                  <option aria-label="None" value="" />
+                  <option value={10}>Ten</option>
+                  <option value={20}>Twenty</option>
+                  <option value={30}>Thirty</option>
+                </Select>
+              </FormControl>
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -199,12 +237,14 @@ export default function SignUp() {
               />
             </Grid>
           </Grid>
-          <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
-            Cadastre-se
-          </Button>
-          <Grid container justifyContent="center">
+          <Grid container alignItems="center" direction="column">
             <Grid item>
-              <Link href="/Site/signIn" variant="body2" style={{ textDecoration: 'none' }}>
+              <Button type="submit" variant="contained" sx={{ mt: 3, mb: 2 , width:200, borderRadius: 5}}>
+                Cadastre-se
+              </Button>
+            </Grid>
+            <Grid item>
+              <Link href="/Site/signIn" variant="body2" style={{ fontSize: "110%" ,textDecoration: 'none' }}>
                 Já tenho uma conta
               </Link>
             </Grid>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {GlobalStyles, CssBaseline, Typography, Box, Container, Grid, Button} from '@material-ui/core';
 import {Card, CardActions, CardContent, CardHeader} from '@material-ui/core';
-import StarIcon from '@material-ui/icons';
+import StarOutline from '@material-ui/icons/StarOutline';
 
 const tiers = [
   {
@@ -43,10 +43,9 @@ const tiers = [
   },
 ];
 
-function PricingContent() {
+export default function Pricing() {
   return (
     <React.Fragment>
-      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
       <CssBaseline />
       {/* Hero unit */}
       <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
@@ -82,7 +81,7 @@ function PricingContent() {
                   title={tier.title}
                   subheader={tier.subheader}
                   titleTypographyProps={{ align: 'center' }}
-                  action={tier.title === 'Pro' ? <StarIcon /> : null}
+                  action={tier.title === 'Pro' ? <StarOutline /> : null}
                   subheaderTypographyProps={{
                     align: 'center',
                   }}
@@ -137,8 +136,4 @@ function PricingContent() {
       </Container>
     </React.Fragment>
   );
-}
-
-export default function Pricing() {
-  return <PricingContent />;
 }
