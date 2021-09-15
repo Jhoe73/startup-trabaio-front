@@ -10,6 +10,7 @@ import PeopleIcon from '@material-ui/icons/People';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 
 export const mainListItems = (
   <div>
@@ -70,7 +71,7 @@ export const secondaryListItems = (
     <Link href='/dashboard/plans'>
       <ListItem button>
         <ListItemIcon>
-          <AssignmentIcon />
+          <LocalOfferIcon />
         </ListItemIcon>
         <ListItemText primary="Meus Planos" />
       </ListItem>
